@@ -4,7 +4,7 @@ import Image from "next/image"; // For optimized images
 import "./header.css";       // Import the corresponding stylesheet
 
 // Import Font Awesome components and icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faFacebook,
     faBehance,
@@ -12,7 +12,7 @@ import {
     faInstagram,
     faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPrint } from "@fortawesome/free-solid-svg-icons";
+import {faPrint} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
     return (
@@ -23,7 +23,7 @@ function Header() {
                   - The src path starts from the /public folder.
                   - The stray semicolon has been removed. 
                 */}
-                <Image src="/assets/react.svg" width={30} height={30} alt="Logo" />
+                <Image src="/assets/react.svg" width={30} height={30} alt="Logo"/>
             </a>
 
             {/* 

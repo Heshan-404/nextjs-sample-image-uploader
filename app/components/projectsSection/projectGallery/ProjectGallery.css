@@ -1,7 +1,6 @@
 /* General gallery container styling */
 .project-gallery-container {
     padding: 20px;
-    background-color: black; /* Dark background for contrast */
 }
 
 /* Flex container for the two main columns */
@@ -61,7 +60,7 @@
 .gallery-box-image.active {
     opacity: 1; /* Incoming image becomes fully visible */
     transform: scale(1); /* Return to normal scale */
-    z-index: 2; /* Ensure active image is on top */
+    z-index: 1; /* Ensure active image is on top */
 }
 
 .gallery-box-image.previous {

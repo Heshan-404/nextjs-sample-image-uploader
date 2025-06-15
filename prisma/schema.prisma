@@ -1,0 +1,21 @@
+// File: prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("POSTGRES_DATABASE_URL")
+  relationMode = "prisma" // Required for Vercel Postgres
+}
+
+// Our model for storing image information
+model Image {
+  id        String   @id @default(cuid()) // Unique ID for the database record
+  url       String // The public URL from Vercel Blob
+  pathname  String   @unique // The unique path/filename in Vercel Blob (needed for deleting)
+  category  String // The category, e.g., "logo-design", "t-shirt-design"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -1,3 +1,5 @@
 /node_modules
 /.next
 /.idea
+/app/generated/prisma
+.env
