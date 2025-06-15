@@ -94,6 +94,7 @@ export default function PortfolioPageClient() {
             <Header/>
             <FirstSection/>
             <SecondSection/>
+            <AboutSection/>
             <ProjectsMenu/>
 
             {GALLERY_CATEGORIES.map((category) => (
