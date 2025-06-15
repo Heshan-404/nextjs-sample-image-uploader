@@ -1,19 +1,18 @@
-import { writeFile } from 'fs/promises';
-import path from 'path';
+// /app/api/upload/route.js
 
-export async function POST(req) {
-  const data = await req.formData();
-  const file = data.get('image');
+import { put } from '@vercel/blob';
+import { NextResponse } from 'next/server';
 
-  if (!file) {
-    return new Response(JSON.stringify({ message: 'No file uploaded' }), { status: 400 });
-  }
+export async function POST(request) {
+  const { searchParams } = new URL(request.url);
+  const filename = searchParams.get('filename');
 
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-  const filename = file.name.replaceAll(' ', '_');
-  const filepath = path.join(process.cwd(), 'public/portfolio-images', filename);
-  await writeFile(filepath, buffer);
+  // The 'request.body' is a ReadableStream.
+  // The 'put' function can directly handle this stream, so you don't need to buffer it.
+  const blob = await put(filename, request.body, {
+    access: 'public',
+  });
 
-  return new Response(JSON.stringify({ message: 'Image uploaded successfully' }), { status: 200 });
+  // Return the blob object, which includes its public URL.
+  return NextResponse.json(blob);
 }
