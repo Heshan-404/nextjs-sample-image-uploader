@@ -1,0 +1,197 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.572);
+  backdrop-filter: blur(10px);
+  height: 50px;
+}
+.navbar-brand {
+  top: 12px;
+  left: 10px;
+}
+.navbar-toggler-icon {
+  background-color: rgba(255, 0, 0, 0);
+}
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.navbar-toggle {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  outline: none;
+  display: none;
+}
+
+.nav-item {
+  background-color: rgba(255, 0, 0, 0);
+  color: white;
+  text-decoration: none;
+  font-family: Inter;
+  text-transform: capitalize;
+}
+
+.nav-item:hover {
+  animation-name: headerBtnHoverAnimation;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+}
+.navbar-contact {
+  display: none;
+  bottom: 30px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+.social-icon {
+  color: white;
+  height: 20px;
+  width: auto;
+  animation-name: socialIconAnimation;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.social-icon:hover {
+  color: #00d8ff;
+}
+
+@keyframes socialIconAnimation {
+  0% {
+    color: #00d8ff;
+    transform: translate(0px, 130px);
+    -webkit-transform: translate(0px, 130px);
+    -moz-transform: translate(0px, 130px);
+    -ms-transform: translate(0px, 130px);
+    -o-transform: translate(0px, 130px);
+  }
+  65% {
+    color: #00d8ff;
+  }
+  100% {
+    transform: translate(0px, -80px);
+    -webkit-transform: translate(0px, -80px);
+    -moz-transform: translate(0px, -80px);
+    -ms-transform: translate(0px, -80px);
+    -o-transform: translate(0px, -80px);
+    opacity: 1;
+  }
+}
+.social-icon-1 {
+  animation-delay: 200ms;
+}
+
+.social-icon-2 {
+  animation-delay: 400ms;
+}
+
+.social-icon-3 {
+  animation-delay: 600ms;
+}
+
+.social-icon-4 {
+  animation-delay: 800ms;
+}
+
+.social-icon-5 {
+  animation-delay: 1000ms;
+}
+
+.social-icon-6 {
+  animation-delay: 1200ms;
+}
+
+@keyframes headerBtnHoverAnimation {
+  0% {
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00d8ff, 0 0 40px #00d8ff,
+      0 0 50px #00d8ff, 0 0 60px #00d8ff, 0 0 70px #00d8ff, 0 0 80px #00d8ff;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar-toggle {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 5px;
+  }
+  .navbar {
+    height: auto;
+  }
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 25px;
+    width: fit-content;
+    position: relative;
+  }
+
+  .nav-item:hover {
+    animation-name: none;
+  }
+  .nav-item:hover {
+    cursor: default;
+  }
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 45%;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+  }
+
+  .navbar-nav {
+    padding-top: 50%;
+    height: 94vh;
+  }
+  .navbar-contact {
+    display: flex;
+  }
+  .social-icon {
+    transform: translate(0px, 120px);
+    -webkit-transform: translate(0px, 120px);
+    -moz-transform: translate(0px, 120px);
+    -ms-transform: translate(0px, 120px);
+    -o-transform: translate(0px, 120px);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

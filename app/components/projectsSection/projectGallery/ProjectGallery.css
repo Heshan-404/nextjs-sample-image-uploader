@@ -1,0 +1,120 @@
+/* General gallery container styling */
+.project-gallery-container {
+    padding: 20px;
+    background-color: black; /* Dark background for contrast */
+}
+
+/* Flex container for the two main columns */
+.gallery-flex-view {
+    display: flex;
+    gap: 20px; /* Space between the two main columns */
+    min-height: 120vh; /* Ensure it takes up vertical space */
+}
+
+/* Styling for each of the two main columns */
+.gallery-column {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    flex: 1; /* Each column takes equal width */
+    gap: 20px; /* Space between the image slots within a column */
+}
+
+/* Wrapper for each gallery item (image slot), allowing flex-grow */
+.gallery-item-wrapper {
+    flex-grow: 1; /* Allows items to fill available vertical space within their column */
+    min-height: 100px; /* Minimum height to prevent collapse */
+    position: relative; /* Needed for positioning content within */
+    overflow: hidden; /* Important for image transitions and rounded corners */
+    border-radius: 8px; /* Slightly rounded corners for aesthetics */
+    background-color: rgb(255, 255, 255, 0.04); /* Default background for boxes, visible when empty */
+    /* Refined white shadow for a softer, more attractive look */
+    /* Softer white shadow */
+    transition: box-shadow 0.4s ease-in-out; /* Smooth transition for shadow on hover */
+}
+
+/* Styles for the individual gallery box within the wrapper */
+.gallery-box {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Allows images and skeleton to be positioned */
+    display: flex; /* For centering skeleton */
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Match wrapper border-radius */
+    overflow: hidden; /* Ensure nothing spills out */
+    /* Removed redundant box-shadow here to avoid conflicts with wrapper shadow */
+}
+
+/* --- Image Transition Styles --- */
+.gallery-box-image {
+    position: absolute; /* Stack images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the box without distortion */
+    opacity: 0; /* Default hidden state */
+    /* Smoother transition for opacity and transform */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(1.02); /* Slightly scaled up when hidden */
+    will-change: opacity, transform; /* Optimize for animation */
+}
+
+.gallery-box-image.active {
+    opacity: 1; /* Incoming image becomes fully visible */
+    transform: scale(1); /* Return to normal scale */
+    z-index: 2; /* Ensure active image is on top */
+}
+
+.gallery-box-image.previous {
+    opacity: 0; /* Outgoing image fades out */
+    transform: scale(0.98); /* Slightly shrink as it fades */
+    z-index: 1; /* Keep it below the active image, but still visible during transition */
+}
+
+/* --- Zoom Effect on Hover --- */
+.gallery-item-wrapper:hover .gallery-box-image.active {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+/* Enhance wrapper shadow on hover for a subtle pop */
+.gallery-item-wrapper:hover {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3); /* Slightly more prominent shadow on hover */
+}
+
+
+/* --- Skeleton Styling --- */
+.skeleton-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 0%, #1a1a1a 35%, #1e1c1c 65%, #000000 100%);
+    background-size: 200% 100%;
+    /* Changed animation-timing-function to ease-in-out for smoother transitions */
+    animation: loading 5.0s ease-in-out infinite;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Mobile view: Adjust project-gallery-container and gallery-flex-view heights */
+@media (max-width: 768px) {
+    .project-gallery-container {
+        height: 70vh;
+    }
+
+    .gallery-flex-view {
+        min-height: 100%; /* Match the container's height */
+        height: calc(70vh - 40px); /* Account for 20px padding top and bottom */
+    }
+
+    .gallery-item-wrapper {
+        min-height: 50px; /* Reduce min-height for smaller screens */
+        flex-grow: 1; /* Still allow items to fill available space */
+    }
+}

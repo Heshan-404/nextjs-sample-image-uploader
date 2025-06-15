@@ -1,0 +1,174 @@
+.about-container {
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+    height: 100vh;
+}
+
+#about-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 980px;
+}
+
+.about-text {
+    font-size: 130px;
+    font-weight: 400;
+    text-align: start;
+    line-height: 1;
+    color: white;
+    margin-left: 80px;
+}
+
+.about-desc {
+    color: white;
+    margin-top: 20px;
+    padding-left: 30px;
+    font-size: 32px;
+    text-align: start;
+    font-family: Inter;
+    font-weight: 300;
+}
+
+.cliped-about-text {
+    color: black;
+    text-shadow: 0 0 3px #26edfb80;
+    font-size: 700px;
+    letter-spacing: 40px;
+    transform: translate(-25%, -95%) rotate(-38.12deg);
+    -webkit-transform: translate(-25%, -95%) rotate(-38.12deg);
+    -moz-transform: translate(-25%, -95%) rotate(-38.12deg);
+    -ms-transform: translate(-25%, -95%) rotate(-38.12deg);
+    -o-transform: translate(-25%, -95%) rotate(-38.12deg);
+}
+
+.skills-text {
+    position: relative;
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: start;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.skills-list {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.skill-img {
+    width: 50px;
+    height: 50px;
+}
+
+.cv-text {
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.cv-download {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: translate(0, -20px);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .about-text {
+        white-space: nowrap;
+        font-size: 100px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1;
+        margin-left: 0px;
+    }
+
+    #about-img {
+        height: 800px;
+    }
+
+    .about-desc {
+        margin-top: 0px;
+        font-size: 14px;
+        text-align: center;
+        padding: 30px;
+        padding-top: 10px;
+    }
+
+    #about-img {
+        background-position: 50%;
+        zoom: 0%;
+        transform: translate(0px, -85%);
+        -webkit-transform: translate(0px, -85%);
+        -moz-transform: translate(0px, -85%);
+        -ms-transform: translate(0px, -85%);
+        -o-transform: translate(0px, -85%);
+    }
+
+    .cliped-about-text {
+        font-size: 300px;
+        transform: translate(-10%, -10%) rotate(-15.12deg);
+        -webkit-transform: translate(-10%, -10%) rotate(-15.12deg);
+        -moz-transform: translate(-10%, -10%) rotate(-15.12deg);
+        -ms-transform: translate(-10%, -10%) rotate(-15.12deg);
+        -o-transform: translate(-10%, -10%) rotate(-15.12deg);
+    }
+
+    .skills-text {
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: start;
+    }
+
+    .skills-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    .skill-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cv-download {
+        width: 30px;
+    }
+
+    .cv-text {
+        padding-top: 2px;
+        font-size: 5px;
+        color: white;
+        text-align: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #about-img {
+        transform: translate(0px, -280px);
+        -webkit-transform: translate(0px, -280px);
+        -moz-transform: translate(0px, -280px);
+        -ms-transform: translate(0px, -280px);
+        -o-transform: translate(0px, -280px);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

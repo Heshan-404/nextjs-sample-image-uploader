@@ -1,15 +1,18 @@
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
+/*
+  This is the most important rule for the scroll-jacking effect.
+  It hides the browser's default scrollbar, giving full control
+  to the JavaScript `window.scrollTo` function.
+*/
+html, body {
+    overflow-x: hidden; /* Disables horizontal scrollbar */
 }
-img {
-  max-width: 100%;
-  height: auto;
+
+/* Your other global styles */
+#body {
+    background-color: black;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+
+/* This class uses the CSS variable defined in layout.jsx with next/font */
+.dorsa-regular {
+    font-family: var(--font-dorsa);
 }

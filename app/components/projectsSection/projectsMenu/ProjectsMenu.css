@@ -1,0 +1,91 @@
+.project-menu-container {
+  height: fit-content;
+  width: 100%;
+}
+
+.project-menu-title {
+  font-size: 200px;
+  color: white;
+}
+
+.project-menu-item {
+  color: white;
+  font-size: 32px;
+  font-weight: 200;
+  position: relative;
+}
+
+
+
+
+.project-menu-item:hover {
+  cursor: pointer;
+}
+
+.project-menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.project-menu-item:hover::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
+@media only screen and (max-width: 600px) {
+  .project-menu-title {
+    font-size: 150px;
+    color: white;
+  }
+
+  .project-menu-item {
+    font-size: 25px;
+  }
+
+  .project-menu-container {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .project-items-list {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

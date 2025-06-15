@@ -1,0 +1,100 @@
+#passion-img {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+.passion-text {
+    font-size: 130px;
+    font-weight: 400;
+    text-align: end;
+    line-height: 1;
+    color: white;
+}
+
+.passion-desc {
+    color: white;
+    margin-top: 20px;
+    font-size: 32px;
+    text-align: end;
+    font-family: Inter;
+    font-weight: 300;
+}
+
+.cliped-text {
+    line-height: 0.9;
+    font-weight: 400;
+    transform: translate(0px, -150%) rotate(30deg);
+    -webkit-transform: translate(0px, -150%) rotate(30deg);
+    -moz-transform: translate(0px, -150%) rotate(30deg);
+    -ms-transform: translate(0px, -150%) rotate(30deg);
+    -o-transform: translate(0px, -150%) rotate(30deg);
+    font-size: 500px;
+    color: black;
+    text-shadow: 0 0 3px #26edfb80;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #passion-img {
+        background-position: 50%;
+        zoom: 50%;
+    }
+
+    .passion-text {
+        white-space: nowrap;
+        font-size: 100px;
+        font-weight: 400;
+        text-align: end;
+        line-height: 1;
+    }
+
+    .passion-desc {
+        margin-top: 0px;
+        font-size: 14px;
+        text-align: start;
+        padding-left: 30px;
+    }
+
+    .passion-details {
+        transform: translate(0px, -0px);
+        -webkit-transform: translate(0px, -0px);
+        -moz-transform: translate(0px, -0px);
+        -ms-transform: translate(0px, -0px);
+        -o-transform: translate(0px, -0px);
+    }
+
+    .cliped-text {
+        font-size: 300px;
+        transform: translate(-30px, -260%) rotate(30deg);
+        -webkit-transform: translate(-30px, -260%) rotate(30deg);
+        -moz-transform: translate(-30px, -260%) rotate(30deg);
+        -ms-transform: translate(-30px, -260%) rotate(30deg);
+        -o-transform: translate(-30px, -260%) rotate(30deg);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #passion-img {
+        transform: translate(0px, -130px);
+        -webkit-transform: translate(0px, -130px);
+        -moz-transform: translate(0px, -130px);
+        -ms-transform: translate(0px, -130px);
+        -o-transform: translate(0px, -130px);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
